@@ -1,7 +1,19 @@
 package com.rmakiyama.motionplayground.ui.playgroundlist
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.rmakiyama.motionplayground.model.Playground
 
 class PlaygroundListViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
+    private val _playgrounds = MutableLiveData<List<Playground>>()
+    val playgrounds: LiveData<List<Playground>> = _playgrounds
+
+    init {
+        _playgrounds.value = listOf(
+            Playground("Transition", "sample of transition"),
+            Playground("Visibility", "sample of visibility")
+        )
+    }
 }
