@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/visibility"
-        android:name="com.rmakiyama.motionplayground.ui.visibilities.VisibilityFragment"
+        android:name="com.rmakiyama.motionplayground.ui.visibility.VisibilityFragment"
         android:label="VisibilityFragment"
         tools:layout="@layout/fragment_visibility" />
 
