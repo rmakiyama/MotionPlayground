@@ -11,9 +11,6 @@ class PlaygroundListViewModel : ViewModel() {
     val playgrounds: LiveData<List<Playground>> = _playgrounds
 
     init {
-        _playgrounds.value = listOf(
-            Playground("Transition", "sample of transition"),
-            Playground("Visibility", "sample of visibility")
-        )
+        _playgrounds.value = listOf(Playground.Visibility)
     }
 }

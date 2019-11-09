@@ -2,10 +2,13 @@ package com.rmakiyama.motionplayground.model
 
 import androidx.recyclerview.widget.DiffUtil
 
-data class Playground(
+sealed class Playground(
     val title: String,
     val summary: String
-)
+) {
+
+    object Visibility: Playground("Visibility", "summary of visibility")
+}
 
 object PlaygroundDiff : DiffUtil.ItemCallback<Playground>() {
     override fun areItemsTheSame(

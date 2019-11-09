@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/playground_list">
+
+    <fragment
+        android:id="@+id/playground_list"
+        android:name="com.rmakiyama.motionplayground.ui.playgroundlist.PlaygroundListFragment"
+        android:label="PlaygroundListFragment"
+        tools:layout="@layout/fragment_playground_list">
+
+        <action
+            android:id="@+id/to_visibility"
+            app:destination="@id/visibility" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/visibility"
+        android:name="com.rmakiyama.motionplayground.ui.visibilities.VisibilityFragment"
+        android:label="VisibilityFragment"
+        tools:layout="@layout/fragment_visibility" />
+
+</navigation>

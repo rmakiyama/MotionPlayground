@@ -8,8 +8,9 @@ import com.rmakiyama.motionplayground.databinding.ItemPlaygroundBinding
 import com.rmakiyama.motionplayground.model.Playground
 import com.rmakiyama.motionplayground.model.PlaygroundDiff
 
-internal class PlaygroundListAdapter :
-    ListAdapter<Playground, PlaygroundViewHolder>(PlaygroundDiff) {
+internal class PlaygroundListAdapter(
+    private val onPlaygroundSelected: (playground: Playground) -> Unit
+) : ListAdapter<Playground, PlaygroundViewHolder>(PlaygroundDiff) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -19,7 +20,9 @@ internal class PlaygroundListAdapter :
             ItemPlaygroundBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
-        )
+        ).apply {
+            itemView.setOnClickListener { onPlaygroundSelected(getItem(adapterPosition)) }
+        }
     }
 
     override fun onBindViewHolder(
