@@ -14,10 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        app:paddingBottomSystemWindowInsets="@{true}"
-        app:paddingTopSystemWindowInsets="@{true}">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/label"
@@ -25,34 +22,49 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.type.name}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
-            app:layout_constraintBottom_toTopOf="@id/image"
+            app:layout_constraintBottom_toTopOf="@id/image1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Default" />
 
         <ImageView
-            android:id="@+id/image"
-            android:layout_width="128dp"
+            android:id="@+id/image1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
+            android:padding="32dp"
+            android:src="@drawable/ic_android"
+            app:layout_constraintBottom_toTopOf="@id/visible_toggle"
+            app:layout_constraintEnd_toStartOf="@id/image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:padding="32dp"
             android:src="@drawable/ic_android"
             app:layout_constraintBottom_toTopOf="@id/visible_toggle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image1"
             app:layout_constraintTop_toBottomOf="@id/label" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/visible_toggle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:checkedButton="@id/type_default"
             app:layout_constraintBottom_toTopOf="@id/toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/image1"
             app:singleSelection="true">
 
             <com.google.android.material.button.MaterialButton

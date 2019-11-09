@@ -47,7 +47,8 @@ class VisibilityFragment : Fragment() {
                     viewModel.getVisibilityTransition()
                 )
             }
-            binding.image.isInvisible = binding.image.isVisible
+            binding.image1.isInvisible = binding.image1.isVisible
+            binding.image2.isInvisible = binding.image2.isVisible
         }
     }
 
