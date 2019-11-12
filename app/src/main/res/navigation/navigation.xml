@@ -14,6 +14,10 @@
         <action
             android:id="@+id/to_visibility"
             app:destination="@id/visibility" />
+
+        <action
+            android:id="@+id/to_normal_shared_element"
+            app:destination="@id/normal_shared_element" />
     </fragment>
 
     <fragment
@@ -21,5 +25,10 @@
         android:name="com.rmakiyama.motionplayground.ui.visibility.VisibilityFragment"
         android:label="VisibilityFragment"
         tools:layout="@layout/fragment_visibility" />
+    <fragment
+        android:id="@+id/normal_shared_element"
+        android:name="com.rmakiyama.motionplayground.ui.normalsharedelement.NormalSharedElementFragment"
+        android:label="NormalSharedElementFragment"
+        tools:layout="@layout/fragment_normal_shared_element" />
 
 </navigation>

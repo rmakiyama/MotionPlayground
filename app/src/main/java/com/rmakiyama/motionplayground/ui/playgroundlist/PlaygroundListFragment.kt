@@ -39,6 +39,7 @@ class PlaygroundListFragment : Fragment() {
     private fun showPlayground(playground: Playground) {
         when (playground) {
             is Playground.Visibility -> findNavController().navigate(R.id.to_visibility)
+            is Playground.NormalSharedElement -> findNavController().navigate(R.id.to_normal_shared_element)
             else -> Unit
         }
     }
