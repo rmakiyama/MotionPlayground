@@ -17,7 +17,11 @@
 
         <action
             android:id="@+id/to_normal_shared_element"
-            app:destination="@id/normal_shared_element" />
+            app:destination="@id/normal_shared_element"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
     </fragment>
 
     <fragment
