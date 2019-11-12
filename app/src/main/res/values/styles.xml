@@ -1,2 +1,13 @@
 <resources>
+
+    <style name="AppTheme.List" />
+
+    <style name="AppTheme.List.Title">
+        <item name="android:textAppearance">@style/TextAppearance.MP.List.Title</item>
+    </style>
+
+    <style name="AppTheme.List.Summary">
+        <item name="android:textAppearance">@style/TextAppearance.MP.List.Summary</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
 </resources>
