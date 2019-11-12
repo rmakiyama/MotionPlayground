@@ -7,7 +7,7 @@ sealed class Playground(
     val summary: String
 ) {
 
-    object Visibility: Playground("Visibility", "summary of visibility")
+    object Visibility: Playground("Visibility", "Visibilityを継承したクラスの基本的な動作を確認。Slide/Fade/Explodeそれぞれの動きを見てみる。")
 }
 
 object PlaygroundDiff : DiffUtil.ItemCallback<Playground>() {
