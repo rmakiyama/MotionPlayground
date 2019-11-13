@@ -31,8 +31,8 @@
         tools:layout="@layout/fragment_visibility" />
     <fragment
         android:id="@+id/normal_shared_element"
-        android:name="com.rmakiyama.motionplayground.ui.normalsharedelement.NormalSharedElementFragment"
+        android:name="com.rmakiyama.motionplayground.ui.basicshared.BasicSharedElementFragment"
         android:label="NormalSharedElementFragment"
-        tools:layout="@layout/fragment_normal_shared_element" />
+        tools:layout="@layout/fragment_basicl_shared_element" />
 
 </navigation>
