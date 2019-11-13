@@ -29,10 +29,21 @@
         android:name="com.rmakiyama.motionplayground.ui.visibility.VisibilityFragment"
         android:label="VisibilityFragment"
         tools:layout="@layout/fragment_visibility" />
+
     <fragment
         android:id="@+id/normal_shared_element"
         android:name="com.rmakiyama.motionplayground.ui.basicshared.BasicSharedElementFragment"
         android:label="NormalSharedElementFragment"
-        tools:layout="@layout/fragment_basicl_shared_element" />
+        tools:layout="@layout/fragment_basicl_shared_element">
+
+        <action
+            android:id="@+id/to_basic_shared_next"
+            app:destination="@id/basic_shared_next" />
+    </fragment>
+    <fragment
+        android:id="@+id/basic_shared_next"
+        android:name="com.rmakiyama.motionplayground.ui.basicshared.BasicSharedNextFragment"
+        android:label="BasicSharedNextFragment"
+        tools:layout="@layout/fragment_basic_shared_next" />
 
 </navigation>
