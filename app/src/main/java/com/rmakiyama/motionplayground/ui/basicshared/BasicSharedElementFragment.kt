@@ -30,7 +30,8 @@ internal class BasicSharedElementFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.image.setOnClickListener { image ->
             val extras = FragmentNavigatorExtras(
-                image to "image"
+                image to "image",
+                binding.title to "title"
             )
             findNavController().navigate(R.id.to_basic_shared_next, null, null, extras)
         }

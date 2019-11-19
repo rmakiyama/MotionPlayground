@@ -36,6 +36,15 @@ class BasicSharedNextFragment : Fragment() {
             addTransition(ChangeBounds())
             addTransition(ChangeClipBounds())
         }.apply {
+            duration = 300L
+            interpolator = FastOutSlowInInterpolator()
+        }
+        sharedElementReturnTransition = TransitionSet().apply {
+            addTransition(ChangeImageTransform())
+            addTransition(ChangeBounds())
+            addTransition(ChangeClipBounds())
+        }.apply {
+            duration = 250L
             interpolator = FastOutSlowInInterpolator()
         }
     }
