@@ -25,7 +25,9 @@
 
         <action
             android:id="@+id/to_transition_set"
-            app:destination="@id/transition_set" />
+            app:destination="@id/transition_set"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter" />
     </fragment>
 
     <fragment

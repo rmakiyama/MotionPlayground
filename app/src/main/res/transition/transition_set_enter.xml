@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential">
+
+    <fade
+        android:duration="400"
+        android:interpolator="@android:interpolator/fast_out_slow_in">
+        <targets>
+            <target android:targetId="@id/transition_image" />
+        </targets>
+    </fade>
+
+    <fade
+        android:duration="300"
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:startDelay="100">
+        <targets>
+            <target android:targetId="@id/transition_title" />
+            <target android:targetId="@id/transition_sub_title" />
+        </targets>
+    </fade>
+
+    <transitionSet android:transitionOrdering="together">
+
+        <slide
+            android:duration="300"
+            android:interpolator="@android:interpolator/fast_out_slow_in"
+            android:slideEdge="bottom">
+
+            <targets>
+                <target android:targetId="@id/transition_body" />
+            </targets>
+        </slide>
+
+        <fade
+            android:duration="300"
+            android:interpolator="@android:interpolator/fast_out_slow_in">
+            <targets>
+                <target android:targetId="@id/transition_body" />
+            </targets>
+        </fade>
+
+    </transitionSet>
+</transitionSet>
