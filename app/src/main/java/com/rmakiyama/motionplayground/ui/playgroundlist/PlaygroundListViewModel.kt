@@ -13,7 +13,8 @@ class PlaygroundListViewModel : ViewModel() {
     init {
         _playgrounds.value = listOf(
             Playground.Visibility,
-            Playground.NormalSharedElement
+            Playground.NormalSharedElement,
+            Playground.TransitionSet
         )
     }
 }

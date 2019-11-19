@@ -16,6 +16,11 @@ sealed class Playground(
         title = "基本的なSharedElement",
         summary = "SharedElement復習。難しいことはしない。"
     )
+
+    object TransitionSet : Playground(
+        title = "TransitionSet",
+        summary = "TransitionSetで遊ぶ。"
+    )
 }
 
 object PlaygroundDiff : DiffUtil.ItemCallback<Playground>() {

@@ -22,6 +22,10 @@
             app:exitAnim="@anim/fragment_close_exit"
             app:popEnterAnim="@anim/fragment_fade_enter"
             app:popExitAnim="@anim/fragment_close_exit" />
+
+        <action
+            android:id="@+id/to_transition_set"
+            app:destination="@id/transition_set" />
     </fragment>
 
     <fragment
@@ -45,5 +49,11 @@
         android:name="com.rmakiyama.motionplayground.ui.basicshared.BasicSharedNextFragment"
         android:label="BasicSharedNextFragment"
         tools:layout="@layout/fragment_basic_shared_next" />
+
+    <fragment
+        android:id="@+id/transition_set"
+        android:name="com.rmakiyama.motionplayground.ui.transitionset.TransitionSetFragment"
+        android:label="TransitionSetFragment"
+        tools:layout="@layout/fragment_transition_set" />
 
 </navigation>

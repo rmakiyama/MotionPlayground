@@ -40,7 +40,7 @@ class PlaygroundListFragment : Fragment() {
         when (playground) {
             is Playground.Visibility -> findNavController().navigate(R.id.to_visibility)
             is Playground.NormalSharedElement -> findNavController().navigate(R.id.to_normal_shared_element)
-            else -> Unit
+            is Playground.TransitionSet -> findNavController().navigate(R.id.to_transition_set)
         }
     }
 }
